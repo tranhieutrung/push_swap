@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:29:51 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 19:13:52 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 14:57:08 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 
 # define MIN_INT -2147483648
 # define MAX_INT 2147483647
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4
+# endif
 
 typedef struct s_node
 {
@@ -44,6 +48,9 @@ int		parse_input(t_pushswap *ps, char **array);
 char	**split_args(char const *s);
 void	put_in_stack(t_pushswap *ps, int size, char **array);
 
+// ALGORITHM
+int		checker(t_pushswap *ps);
+
 // OPERATIONS
 void	sx(t_stack *stack);
 void	ss(t_pushswap *ps);
@@ -60,7 +67,7 @@ void	rrr(t_pushswap *ps);
 int		is_white_space(char c);
 int		is_all_white_space(char *s);
 void	free_array(char **array);
-void	free_arrays(char **array1, char **array2, char **array3);
+char	**free_arrays(char **array1, char **array2, char **array3);
 int		argvs_size(char **av);
 
 // STACK UTILS

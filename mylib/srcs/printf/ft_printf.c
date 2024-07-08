@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 22:05:38 by hitran            #+#    #+#             */
-/*   Updated: 2024/06/07 09:43:48 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 14:58:06 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int	ft_printf(const char *str, ...)
 	int				temp;
 
 	len = 0;
+	if (!str)
+		return (-1);
 	va_start(args, str);
 	while (*str)
 	{

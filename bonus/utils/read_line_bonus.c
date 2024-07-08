@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 18:35:58 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 19:23:15 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 12:09:42 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,44 +24,28 @@ static int	read_buffer(char *buffer, int *buffer_index, int *buffer_size)
 	return (1);
 }
 
-static char	*expand_line(char *line, int line_length)
-{
-	char	*new_line;
-
-	new_line = malloc(line_length + BUFFER_SIZE + 1);
-	if (!new_line)
-	{
-		free(line);
-		return (NULL);
-	}
-	if (line)
-	{
-		ft_memcpy(new_line, line, line_length);
-		free(line);
-	}
-	return (new_line);
-}
-
 char	*read_line(char *buffer, int *buffer_index, int *buffer_size)
 {
 	char	*line;
 	int		line_length;
 
-	line = NULL;
+	line = malloc(5);
+	if (!line)
+		return (NULL);
 	line_length = 0;
 	while (1)
 	{
 		if (!read_buffer(buffer, buffer_index, buffer_size))
-			return (line);
+			return (free(line), NULL);
+		if (!ft_strchr(buffer, '\n'))
+			return (free(line), ft_strdup("Error"));
 		if (buffer[*buffer_index] == '\n')
 		{
-			line = expand_line(line, line_length);
 			line[line_length] = '\n';
 			line[line_length + 1] = '\0';
 			(*buffer_index)++;
 			return (line);
 		}
-		line = expand_line(line, line_length);
 		line[line_length] = buffer[*buffer_index];
 		line_length++;
 		(*buffer_index)++;

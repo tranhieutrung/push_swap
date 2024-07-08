@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:57:26 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 10:26:13 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 14:26:49 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,14 @@ char	**join_array(char **array1, char **array2)
 	{
 		array[i] = ft_strdup(array1[i]);
 		if (!array[i++])
-			return (free_arrays(array1, array2, array), NULL);
+			return (free_arrays(array1, array2, array));
 	}
 	j = 0;
 	while (array2 && array2[j])
 	{
 		array[i + j] = ft_strdup(array2[j]);
 		if (!array[i + j++])
-			return (free_arrays(array1, array2, array), NULL);
+			return (free_arrays(array1, array2, array));
 	}
 	free_arrays(array1, array2, NULL);
 	return (array);
