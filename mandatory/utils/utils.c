@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:55:05 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/05 16:06:29 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 13:47:06 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	is_white_space(char c)
 {
 	return (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r');
+		|| c == '\v' || c == '\f' || c == '\r');//
 }
 
 int	is_all_white_space(char *s)
@@ -63,49 +63,3 @@ void	free_arrays(char **array1, char **array2, char **array3)
 	free_array(array2);
 	free_array(array3);
 }
-
-/*
-static void	print_index(t_stack *stack, t_node **current, int i)
-{
-	int len;
-
-	if (stack->size == 0 || !(*current))
-	{
-		ft_putstr("             ");
-		return ;
-	}
-	len = ft_strlen(ft_itoa((*current)->index));
-	if (i < stack->size)
-	{
-		write(1, "              ", 13 - len - (13 - len) / 2);
-		ft_putnbr((*current)->index);
-		write(1, "              ", (13 - len) / 2);
-		(*current) = (*current)->previous;
-	}
-	else
-		ft_putstr("             ");
-}
-
-void	print_stacks(t_pushswap *ps)
-{
-	int		i;
-	t_node	*a_current;
-	t_node	*b_current;
-
-	i = 0;
-	a_current = ps->a->head;
-	b_current = ps->b->head;
-	ft_putendl_fd("+------A------+------B------+", 1);
-	while (i < ps->a->size || i < ps->b->size)
-	{
-		ft_putchar('|');
-		print_index(ps->a, &a_current, i);
-		ft_putchar('|');
-		print_index(ps->b, &b_current, i);
-		ft_putchar('|');
-		ft_putstr("\n");
-		i++;
-	}
-	ft_putendl_fd("+-------------+-------------+", 1);
-}
-*/

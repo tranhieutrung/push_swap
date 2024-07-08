@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:07:44 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 18:35:45 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 10:29:14 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@
 
 # ifndef OPEN_MAX
 #  define OPEN_MAX 1024
-# endif
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
 # endif
 
 typedef struct s_list

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/01 11:26:05 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 19:26:16 by hitran           ###   ########.fr       */
+/*   Created: 2024/07/08 14:32:53 by hitran            #+#    #+#             */
+/*   Updated: 2024/07/08 14:54:41 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	print_error(void)
 {
-	ft_putendl_fd("Error", 2);
+	ft_putendl_fd("Error", 1);
 	return (1);
 }
 
@@ -47,7 +47,7 @@ static int	execute_operations(t_pushswap *ps, char *operation)
 	return (0);
 }
 
-static int	checker(t_pushswap *ps)
+int	checker(t_pushswap *ps)
 {
 	char	buffer[BUFFER_SIZE];
 	int		buffer_index;
@@ -69,24 +69,5 @@ static int	checker(t_pushswap *ps)
 		operation = read_line(buffer, &buffer_index, &buffer_size);
 	}
 	free(operation);
-	return (0);
-}
-
-int	main(int argc, char **argv)
-{
-	t_pushswap	ps;
-
-	if (argc < 2)
-		return (1);
-	ps = (t_pushswap){0};
-	if (parse_input(&ps, ++argv))
-		return (1);
-	if (checker(&ps))
-		return (1);
-	if (is_sorted(ps.a) && !ps.b->size)
-		ft_putendl_fd("OK", 1);
-	else
-		ft_putendl_fd("KO", 1);
-	free_stacks(&ps);
 	return (0);
 }

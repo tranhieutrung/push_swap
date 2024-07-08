@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:55:05 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/05 16:06:19 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 14:30:00 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,10 @@ void	free_array(char **array)
 	}
 }
 
-void	free_arrays(char **array1, char **array2, char **array3)
+char	**free_arrays(char **array1, char **array2, char **array3)
 {
 	free_array(array1);
 	free_array(array2);
 	free_array(array3);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:57:26 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 10:04:30 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/08 13:47:00 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,14 @@ char	**join_array(char **array1, char **array2)
 	{
 		array[i] = ft_strdup(array1[i]);
 		if (!array[i++])
-			return (free_arrays(array1, array2, array), NULL);
+			return (free_arrays(array1, array2, array), NULL);//
 	}
 	j = 0;
 	while (array2 && array2[j])
 	{
 		array[i + j] = ft_strdup(array2[j]);
 		if (!array[i + j++])
-			return (free_arrays(array1, array2, array), NULL);
+			return (free_arrays(array1, array2, array), NULL);//
 	}
 	free_arrays(array1, array2, NULL);
 	return (array);
@@ -105,10 +105,10 @@ int	parse_input(t_pushswap *ps, char **av)
 	{
 		temp = split_args(*av);
 		if (!temp || !argvs_size(temp) || is_invalid(temp))
-			return (handle_error(temp, array));
+			return (handle_error(temp, array));//
 		array = join_array(array, temp);
 		if (!array || !argvs_size(array) || is_invalid(array))
-			return (handle_error(NULL, array));
+			return (handle_error(NULL, array));//
 		av++;
 	}
 	put_in_stack(ps, argvs_size(array), array);
