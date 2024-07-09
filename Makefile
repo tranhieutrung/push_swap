@@ -6,7 +6,7 @@
 #    By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/03 18:50:13 by hitran            #+#    #+#              #
-#    Updated: 2024/07/08 15:54:19 by hitran           ###   ########.fr        #
+#    Updated: 2024/07/09 15:22:31 by hitran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ CFLAGS 			= -Wall -Wextra -Werror
 INCLUDES 		= -I./includes -I./mylib/includes
 
 # Directories
-MAN_DIR 		= ./mandatory
-BONUS_DIR		= ./bonus
+MAN_DIR 		= ./srcs/mandatory
+BONUS_DIR		= ./srcs/bonus
 MYLIB_DIR	 	= ./mylib
 
 # Source's directories

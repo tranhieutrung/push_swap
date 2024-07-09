@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:57:26 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/08 13:47:00 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/09 15:35:03 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,3 +115,14 @@ int	parse_input(t_pushswap *ps, char **av)
 	free_array(array);
 	return (0);
 }
+/*
+//Faster parsing version
+
+int	parse_input(t_pushswap *ps, char **av)
+{
+	if (!av || is_invalid(av))
+		return (handle_error(NULL, NULL));
+	put_in_stack(ps, argvs_size(av), av);
+	return (0);
+}
+*/
