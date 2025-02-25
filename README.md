@@ -53,7 +53,7 @@ make
 ## Result
 Actual Status : finished.
 
-![Push_swap Result](https://github.com/tranhieutrung/images/blob/830492ba71274c5695c8f6cec8e80ff7f3ec39ba/push_swap_result.png)
+![Push_swap Result](https://github.com/tranhieutrung/push_swap/blob/main/push_swap_result.png)
 
 ## Contribution
 If you'd like to contribute to the project, please create a pull request on GitHub. Please adhere to the contribution guidelines outlined in the CONTRIBUTING.md file.
