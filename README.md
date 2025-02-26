@@ -42,14 +42,17 @@ The main program determines the number of integers and calls corresponding funct
 ## Usage
 To compile and run the program:
 
+```bash
+git clone https://github.com/tranhieutrung/push_swap.git
+cd push_swap
 make
 ./push_swap <list_of_numbers>
-
+```
 For example:
-
+```bash
 make
 ./push_swap 3 2 5 1 4
-
+```
 ## Result
 Actual Status : finished.
 
