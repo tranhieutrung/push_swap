@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:26:05 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/08 14:33:35 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:02:20 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (1);
-	ps = (t_pushswap){0};
+	ft_bzero(&ps, sizeof(t_pushswap));
 	if (parse_input(&ps, ++argv))
 		return (1);
 	if (checker(&ps))

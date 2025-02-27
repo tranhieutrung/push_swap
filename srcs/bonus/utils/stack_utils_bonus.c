@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:52:07 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 16:34:49 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/10 09:46:13 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	is_sorted(t_stack *stack)
 {
 	t_node	*temp;
 
+	if (!stack || !stack->head)
+		return (0);
 	temp = stack->head;
 	while (temp->previous)
 	{

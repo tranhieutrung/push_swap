@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:55:05 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/08 13:47:06 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/14 13:02:22 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	is_white_space(char c)
 {
 	return (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r');//
+		|| c == '\v' || c == '\f' || c == '\r');
 }
 
 int	is_all_white_space(char *s)
@@ -57,9 +57,10 @@ void	free_array(char **array)
 	}
 }
 
-void	free_arrays(char **array1, char **array2, char **array3)
+char	**free_arrays(char **array1, char **array2, char **array3)
 {
 	free_array(array1);
 	free_array(array2);
 	free_array(array3);
+	return (NULL);
 }

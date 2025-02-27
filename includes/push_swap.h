@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:29:51 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 11:39:26 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/10 09:13:07 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	rrb(t_pushswap *ps);
 int		is_white_space(char c);
 int		is_all_white_space(char *s);
 void	free_array(char **array);
-void	free_arrays(char **array1, char **array2, char **array3);
+char	**free_arrays(char **array1, char **array2, char **array3);
 int		argvs_size(char **av);
 
 // STACK UTILS

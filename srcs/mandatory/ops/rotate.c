@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:44:31 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/03 18:49:05 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/14 13:01:23 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ void	rb(t_pushswap *ps)
 	rotate(ps->b);
 	ft_putendl_fd("rb", 1);
 }
-
-/*
-void	rr(t_pushswap *ps)
-{
-	ra(ps);
-	rb(ps);
-	ft_putendl_fd("rr", 1);
-}
-*/

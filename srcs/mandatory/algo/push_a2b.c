@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:56:32 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/07 11:28:29 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/14 13:30:14 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,19 @@ static int	push_and_rotate_b(t_pushswap *ps, int size)
 	return (1);
 }
 
+static int	*create_pushed_array(t_pushswap *ps, int size)
+{
+	int	*pushed_value;
+
+	pushed_value = ft_calloc(size, sizeof(int));
+	if (!pushed_value)
+	{
+		free_stacks(ps);
+		exit (1);
+	}
+	return (pushed_value);
+}
+
 void	push_a2b(t_pushswap *ps, int size)
 {
 	int	start;
@@ -41,7 +54,7 @@ void	push_a2b(t_pushswap *ps, int size)
 	int	ivalue;
 	int	*pushed_value;
 
-	pushed_value = ft_calloc(size, sizeof(int));
+	pushed_value = create_pushed_array(ps, size);
 	set_chunk_range(&start, &end, size);
 	while (ps->a->size > 3)
 	{

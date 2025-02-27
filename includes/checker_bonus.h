@@ -6,7 +6,7 @@
 /*   By: hitran <hitran@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:29:51 by hitran            #+#    #+#             */
-/*   Updated: 2024/07/08 14:57:08 by hitran           ###   ########.fr       */
+/*   Updated: 2024/07/10 09:55:45 by hitran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define MAX_INT 2147483647
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4
+#  define BUFFER_SIZE 1024
 # endif
 
 typedef struct s_node
