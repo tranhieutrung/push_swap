@@ -41,18 +41,28 @@ The main program determines the number of integers and calls corresponding funct
 
 ## Usage
 To compile and run the program:
-
+- Mandatory:
 ```bash
 git clone https://github.com/tranhieutrung/push_swap.git
 cd push_swap
 make
 ./push_swap <list_of_numbers>
 ```
-For example:
+For example:<br>
+![Push_swap Usage](https://github.com/tranhieutrung/push_swap/blob/main/push_swap_usage.gif)
+
+- Bonus:
 ```bash
-make
-./push_swap 3 2 5 1 4
+make bonus
+./push_swap <list_of_numbers> | ./checker <list_of_numbers>
+./checker <list_of_numbers>
 ```
+![Checker Usage](https://github.com/tranhieutrung/push_swap/blob/main/checker_usage.gif)
+
+## Visualization
+Use this visualizer to visualize my push_swap:<br>
+https://github.com/o-reo/push_swap_visualizer.git <br>
+![Visualization](https://github.com/tranhieutrung/push_swap/blob/main/visualizer_usage.gif)
 ## Result
 Actual Status : finished.
 
